@@ -3,21 +3,21 @@ terraform {
 }
 
 provider "aws" {
-  region = var.regions
+  region = "us-east-1"
 }
 
 
 resource "aws_s3_bucket" "terraform_igorschul_bucket" {
   bucket = "terraform-bucket-demo-sfcb"
   key    = "terraform-bucket-demo-sfcb.tfstate"
-  acl = "private"
+  acl    = "public"
   
   versioning {
     enabled = true
   }
   
   tags = {
-    CreatedBy     = var.tags.owner
-    Env           = var.tags.env
+    Owner         = "igors"
+    Env           = "lab"
   }
 }
