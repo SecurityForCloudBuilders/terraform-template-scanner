@@ -8,12 +8,12 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "terraform_igorschul_bucket" {
-  bucket = "terraform-bucket-demo-sfcb"
-  key    = "terraform-bucket-demo-sfcb.tfstate"
+  bucket = "terraform-bucket-demo-oc"
+  key    = "terraform-bucket-demo-oc.tfstate"
   acl    = "public"
   
   versioning {
-    enabled = true
+    enabled = false
   }
   
   tags = {
