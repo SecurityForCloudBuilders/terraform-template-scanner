@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "terraform_igorschul_bucket" {
   acl    = "public"
   
   versioning {
-    enabled = false
+    enabled = true
   }
   
   tags = {
